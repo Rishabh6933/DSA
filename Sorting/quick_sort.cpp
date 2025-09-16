@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//using Lomuto partition
+//using Hoare partition
 
 
 int partition(vector<int> &arr, int low, int high)
