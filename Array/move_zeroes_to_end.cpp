@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Q. Move zeroes to end
+// Q. Move zeroes to end in an array.
 
 void brute_force_movezeroestoend(vector<int> &arr, int n)
 {
@@ -56,7 +56,7 @@ int main()
         cin >> arr[i];
     }
 
-    optimal_movezeroestoend(arr, n);
+    //optimal_movezeroestoend(arr, n);
 
     brute_force_movezeroestoend(arr, n);
 
