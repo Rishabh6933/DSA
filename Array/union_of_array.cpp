@@ -50,6 +50,24 @@ vector<int> unionArray(vector<int> &arr1, int n, vector<int> &arr2, int m) {
 
 }
 
+
+
+// union of two unsorted arrays
+
+vector<int> unionArr(vector<int> &arr1, int n, vector<int> &arr2, int m) {
+    set<int> s;
+    for(int i=0; i<arr1.size(); i++) {
+        s.insert(arr1[i]);
+    }
+    for(int i=0; i<arr2.size(); i++) {
+        s.insert(arr2[i]);
+    }
+    vector<int> unionArr(s.begin(), s.end());
+    return unionArr;
+}
+
+
+
 int main() {
     int n;
     cin>>n;
@@ -67,7 +85,7 @@ int main() {
         cin>>arr2[i];
     }
 
-    vector<int> result = unionArray(arr1, n, arr2, m);
+    vector<int> result = unionArr(arr1, n, arr2, m);
 
     for(int x : result) {
         cout<<x<<" ";
