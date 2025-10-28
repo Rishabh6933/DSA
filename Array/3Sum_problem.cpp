@@ -6,14 +6,14 @@ using namespace std;
 
 
 //OPTIMAL
-vector<vector<int>> Optimal_threeSum(vector<int>& arr) {
+vector<vector<int>> Optimal_threeSum(vector<int> &arr) {
     vector<vector<int>> ans;
     int n = arr.size();
     sort(arr.begin(), arr.end());
     for(int i=0; i<n; i++) {
-        if(i>1 && arr[i] == arr[i-1]) continue;
+        if(i>0 && arr[i] == arr[i-1]) continue;
         int j = i+1;
-        int k = n;
+        int k = n-1;
         while(j<k) {
             int sum = arr[i] + arr[j] + arr[k];
             if(sum < 0) j++;
@@ -33,7 +33,7 @@ vector<vector<int>> Optimal_threeSum(vector<int>& arr) {
 
 
 // BETTER
-vector<vector<int>> Better_threeSum(vector<int>& arr) {
+vector<vector<int>> Better_threeSum(vector<int> &arr) {
     set<vector<int>> st;
     int n = arr.size();
     for(int i=0; i<n-2; i++) {
@@ -53,7 +53,7 @@ vector<vector<int>> Better_threeSum(vector<int>& arr) {
 }
 
 // BRUTE FORCE
-vector<vector<int>> bruteForce_threeSum(vector<int>& arr) {
+vector<vector<int>> bruteForce_threeSum(vector<int> &arr) {
     set<vector<int>> st;
     int n = arr.size();
     for(int i=0; i<n-2; i++) {
